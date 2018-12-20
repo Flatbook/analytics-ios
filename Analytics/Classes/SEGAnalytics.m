@@ -130,8 +130,8 @@ NSString *const SEGBuildKeyV2 = @"SEGBuildKeyV2";
     NSString *previousVersion = [[NSUserDefaults standardUserDefaults] stringForKey:SEGVersionKey];
     NSString *previousBuildV2 = [[NSUserDefaults standardUserDefaults] stringForKey:SEGBuildKeyV2];
 
-    NSString *currentVersion = [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"];
-    NSString *currentBuild = [[NSBundle mainBundle] infoDictionary][@"CFBundleVersion"];
+    NSString *currentVersion = self.configuration.appVersion;
+    NSString *currentBuild = self.configuration.appBuild;
 
     if (!previousBuildV2) {
         [self track:@"Application Installed" properties:@{
@@ -167,8 +167,8 @@ NSString *const SEGBuildKeyV2 = @"SEGBuildKeyV2";
     if (!self.configuration.trackApplicationLifecycleEvents) {
         return;
     }
-    NSString *currentVersion = [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"];
-    NSString *currentBuild = [[NSBundle mainBundle] infoDictionary][@"CFBundleVersion"];
+    NSString *currentVersion = self.configuration.appVersion;
+    NSString *currentBuild = self.configuration.appBuild;
     [self track:@"Application Opened" properties:@{
         @"from_background" : @YES,
         @"version" : currentVersion ?: @"",

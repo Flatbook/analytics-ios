@@ -153,8 +153,8 @@ static CTTelephonyNetworkInfo *_telephonyNetworkInfo;
     if (infoDictionary.count) {
         dict[@"app"] = @{
             @"name" : infoDictionary[@"CFBundleDisplayName"] ?: @"",
-            @"version" : infoDictionary[@"CFBundleShortVersionString"] ?: @"",
-            @"build" : infoDictionary[@"CFBundleVersion"] ?: @"",
+            @"version" : self.configuration.appVersion,
+            @"build" : self.configuration.appBuild,
             @"namespace" : [[NSBundle mainBundle] bundleIdentifier] ?: @"",
         };
     }
