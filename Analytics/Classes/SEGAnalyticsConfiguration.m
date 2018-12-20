@@ -57,6 +57,8 @@
         self.flushAt = 20;
         self.flushInterval = 30;
         self.maxQueueSize = 1000;
+        self.appVersion = [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"];
+        self.appBuild = [[NSBundle mainBundle] infoDictionary][@"CFBundleVersion"];
         self.payloadFilters = @{
             @"(fb\\d+://authorize#access_token=)([^ ]+)": @"$1((redacted/fb-auth-token))"
         };

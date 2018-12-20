@@ -131,6 +131,16 @@ typedef NSMutableURLRequest *_Nonnull (^SEGRequestFactory)(NSURL *_Nonnull);
 @property (nonatomic, strong, nullable) NSArray<id<SEGMiddleware>> *middlewares;
 
 /**
+ * Version of the host app.
+ */
+@property (nonatomic, strong, nullable) NSString *appVersion;
+
+/**
+ * Build number of the host app.
+ */
+@property (nonatomic, strong, nullable) NSString *appBuild;
+
+/**
  * Register a factory that can be used to create an integration.
  */
 - (void)use:(id<SEGIntegrationFactory> _Nonnull)factory;
