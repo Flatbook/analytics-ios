@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.frameworks = 'CoreTelephony', 'Security', 'StoreKit', 'SystemConfiguration', 'UIKit'
 
   s.source_files = [
-    'Analytics/Classes/**/*',
-    'Analytics/Vendor/**/*'
+    'SonderAnalytics/Classes/**/*',
+    'SonderAnalytics/Vendor/**/*'
   ]
 end
