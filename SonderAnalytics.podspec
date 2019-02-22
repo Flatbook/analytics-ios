@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SonderAnalytics"
-  s.version          = "3.7.0-beta.2"
+  s.version          = "3.8.0"
   s.summary          = "The hassle-free way to add analytics to your iOS app."
 
   s.description      = <<-DESC
@@ -10,9 +10,8 @@ Pod::Spec.new do |s|
 
   s.homepage         = "http://segment.com/"
   s.license          =  { :type => 'MIT' }
-  s.author           = { "Segment" => "friends@segment.com" }
-  s.source           = { :git => "https://github.com/segmentio/analytics-ios.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/segment'
+  s.author           = { "Sonder" => "mobile-tech-all@sonder.com" }
+  s.source           = { :git => "https://github.com/Flatbook/analytics-ios", :tag => s.version.to_s }
 
   s.ios.deployment_target = '7.0'
   s.tvos.deployment_target = '9.0'
